@@ -26,7 +26,7 @@ struct transaction * mergeSortedArrays(struct transaction *A, int ALen, struct t
 	{
 		int count = 0, x = 0, maxcount = 0, iter1 = 0, var2 = 0;
 		int i = 0, j = 0, day = 0, month = 0, year = 0, day1 = 0, month1 = 0, year1 = 0;
-		struct transaction *result = (struct transaction*)malloc(ALen + BLen);
+		struct transaction *result=(struct transaction*)malloc((ALen+BLen)*sizeof(struct transaction)) ;
 		while (i < ALen&&j < BLen)
 		{
 			day = (A[i].date[0] - 48) * 10 + A[i].date[1] - 48;
